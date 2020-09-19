@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Loaf
 
 class ViewController: UIViewController {
     
@@ -30,10 +31,8 @@ class ViewController: UIViewController {
         userDefaults.setValue(inputText, forKey: "SaveText")
         print("inputText: \(inputText!)")
 
-        // 保存できたらアラートを表示
-        let saveAlert = UIAlertController(title: "保存完了", message: "文字列が保存されました", preferredStyle: .alert)
-        saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(saveAlert, animated: true, completion: nil)
+        // 保存できたらLoafでトーストを表示
+        Loaf("保存されました", state: .success, sender: self).show()
     }
     
     @IBAction func loadText() {
@@ -42,10 +41,8 @@ class ViewController: UIViewController {
         print("displayText: \(displayText!)")
         displayLabel.text = displayText
         
-        // 読み出したらアラートを表示
-        let loadAlert = UIAlertController(title: "読み出し完了", message: "文字列を読み出しました", preferredStyle: .alert)
-        loadAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(loadAlert, animated: true, completion: nil)
+        // 読み出したらLoafでトーストを表示
+        Loaf("読み出しました", state: .info, sender: self).show()
     }
 
 }
