@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,102 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoafHandsOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONT-T2-Ffw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="453"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52T-r1-xxh">
+                                        <rect key="frame" x="8" y="244" width="398" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="gaL-Hc-59I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymd-ya-U3f">
+                                        <rect key="frame" x="166" y="363" width="82" height="30"/>
+                                        <color key="backgroundColor" white="0.89667166095890416" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="g0U-eb-xdI"/>
+                                        </constraints>
+                                        <state key="normal" title="読み出す">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loadText" destination="BYZ-38-t0r" eventType="touchUpInside" id="noY-aT-qdR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.39048828612689868" green="0.85557409183150679" blue="0.50755069978185574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ymd-ya-U3f" secondAttribute="bottom" constant="60" id="CPh-Iq-afP"/>
+                                    <constraint firstItem="52T-r1-xxh" firstAttribute="centerX" secondItem="ONT-T2-Ffw" secondAttribute="centerX" id="HFV-GL-EV4"/>
+                                    <constraint firstItem="ymd-ya-U3f" firstAttribute="top" secondItem="52T-r1-xxh" secondAttribute="bottom" constant="90" id="JD0-bq-hBq"/>
+                                    <constraint firstAttribute="width" secondItem="ONT-T2-Ffw" secondAttribute="height" multiplier="138:151" id="Ut7-b0-5FW"/>
+                                    <constraint firstItem="ymd-ya-U3f" firstAttribute="centerX" secondItem="ONT-T2-Ffw" secondAttribute="centerX" id="bdU-WE-qCL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWh-2j-bGO">
+                                <rect key="frame" x="0.0" y="453" width="414" height="443"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZP-Zn-rhG">
+                                        <rect key="frame" x="166" y="184" width="82" height="30"/>
+                                        <color key="backgroundColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="y1W-EE-Ke1"/>
+                                        </constraints>
+                                        <state key="normal" title="書き込む">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveText" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCL-TP-w9B"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-vz-OlG">
+                                        <rect key="frame" x="137" y="60" width="140" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="FNh-M4-qTu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.42009680946888789" green="0.41465575441204461" blue="0.76288328047808218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fZP-Zn-rhG" firstAttribute="centerX" secondItem="FWh-2j-bGO" secondAttribute="centerX" id="1wT-9c-rq7"/>
+                                    <constraint firstItem="Ys5-vz-OlG" firstAttribute="centerX" secondItem="FWh-2j-bGO" secondAttribute="centerX" id="FK4-w7-mMn"/>
+                                    <constraint firstItem="fZP-Zn-rhG" firstAttribute="top" secondItem="Ys5-vz-OlG" secondAttribute="bottom" constant="90" id="M6e-95-fGb"/>
+                                    <constraint firstItem="Ys5-vz-OlG" firstAttribute="top" secondItem="FWh-2j-bGO" secondAttribute="top" constant="60" id="gaz-c1-9U2"/>
+                                    <constraint firstAttribute="width" secondItem="FWh-2j-bGO" secondAttribute="height" multiplier="414:443" id="oNw-mf-JGP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FWh-2j-bGO" firstAttribute="top" secondItem="ONT-T2-Ffw" secondAttribute="bottom" id="4MT-JM-LHZ"/>
+                            <constraint firstItem="FWh-2j-bGO" firstAttribute="top" secondItem="ONT-T2-Ffw" secondAttribute="bottom" id="9SS-II-WdF"/>
+                            <constraint firstItem="FWh-2j-bGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U8q-J8-oxf"/>
+                            <constraint firstAttribute="bottom" secondItem="FWh-2j-bGO" secondAttribute="bottom" id="fiu-5f-9Z3"/>
+                            <constraint firstItem="ONT-T2-Ffw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="obs-xY-Fmx"/>
+                            <constraint firstItem="ONT-T2-Ffw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rB6-zp-ede"/>
+                            <constraint firstItem="FWh-2j-bGO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wvD-G2-vim"/>
+                            <constraint firstItem="ONT-T2-Ffw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgd-AF-LqR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="52T-r1-xxh" id="VDP-Vi-8o5"/>
+                        <outlet property="inputTextField" destination="Ys5-vz-OlG" id="XS0-4M-sn4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
