@@ -28,11 +28,18 @@ class ViewController: UIViewController {
     @IBAction func saveText() {
         // inputTextFieldの入力内容をUserDefaultsに保存する
         let inputText = inputTextField.text
-        userDefaults.setValue(inputText, forKey: "SaveText")
-        print("inputText: \(inputText!)")
+        
+        if inputText!.isEmpty {
+            // Loafで警告トーストを表示
+            Loaf("1文字以上入力してください", state: .error, sender: self).show()
+        }
+        else {
+            userDefaults.setValue(inputText, forKey: "SaveText")
+            print("inputText: \(inputText!)")
 
-        // 保存できたらLoafでトーストを表示
-        Loaf("保存されました", state: .success, sender: self).show()
+            // 保存できたらLoafでトーストを表示
+            Loaf("保存されました", state: .success, sender: self).show()
+        }
     }
     
     @IBAction func loadText() {
