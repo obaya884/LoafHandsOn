@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66929DC52516B2FF007BC1FE /* Loaf in Frameworks */ = {isa = PBXBuildFile; productRef = 66929DC42516B2FF007BC1FE /* Loaf */; };
 		66A835882516A7FF0073FF0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A835872516A7FF0073FF0A /* AppDelegate.swift */; };
 		66A8358A2516A7FF0073FF0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A835892516A7FF0073FF0A /* SceneDelegate.swift */; };
 		66A8358C2516A7FF0073FF0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A8358B2516A7FF0073FF0A /* ViewController.swift */; };
@@ -33,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66929DC52516B2FF007BC1FE /* Loaf in Frameworks */,
 				66A8359D2516AC830073FF0A /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +87,6 @@
 			name = LoafHandsOn;
 			packageProductDependencies = (
 				66A8359C2516AC830073FF0A /* IQKeyboardManagerSwift */,
-				66929DC42516B2FF007BC1FE /* Loaf */,
 			);
 			productName = LoafHandsOn;
 			productReference = 66A835842516A7FF0073FF0A /* LoafHandsOn.app */;
@@ -121,7 +118,6 @@
 			mainGroup = 66A8357B2516A7FF0073FF0A;
 			packageReferences = (
 				66A8359B2516AC830073FF0A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				66929DC32516B2FF007BC1FE /* XCRemoteSwiftPackageReference "Loaf" */,
 			);
 			productRefGroup = 66A835852516A7FF0073FF0A /* Products */;
 			projectDirPath = "";
@@ -354,14 +350,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		66929DC32516B2FF007BC1FE /* XCRemoteSwiftPackageReference "Loaf" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/schmidyy/Loaf";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.6.0;
-			};
-		};
 		66A8359B2516AC830073FF0A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
@@ -373,11 +361,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		66929DC42516B2FF007BC1FE /* Loaf */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 66929DC32516B2FF007BC1FE /* XCRemoteSwiftPackageReference "Loaf" */;
-			productName = Loaf;
-		};
 		66A8359C2516AC830073FF0A /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 66A8359B2516AC830073FF0A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
