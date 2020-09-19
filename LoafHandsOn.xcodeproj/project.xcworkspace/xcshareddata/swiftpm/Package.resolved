@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "IQKeyboardManagerSwift",
+        "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager",
+        "state": {
+          "branch": null,
+          "revision": "4dc6bc7d1c9747bd0c261c8c055903f9fdef91f7",
+          "version": "6.5.6"
+        }
+      },
+      {
+        "package": "Loaf",
+        "repositoryURL": "https://github.com/schmidyy/Loaf",
+        "state": {
+          "branch": null,
+          "revision": "31f3b3fff28918c49d69ee76be72b041161b67c7",
+          "version": "0.6.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
